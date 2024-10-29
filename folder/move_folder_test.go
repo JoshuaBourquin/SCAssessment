@@ -421,6 +421,7 @@ func Test_folder_MoveFolder(t *testing.T) {
 			}
 
 			if !reflect.DeepEqual(test.want, res) {
+				
 				t.FailNow()
 			}
 
