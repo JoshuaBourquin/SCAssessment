@@ -2,12 +2,25 @@ package main
 
 import (
 	"fmt"
-
-	"github.com/georgechieng-sc/interns-2022/folder"
+	"sc-takehome/folder"
 	"github.com/gofrs/uuid"
 )
 
 func main() {
+
+	orgID := uuid.FromStringOrNil(folder.DefaultOrgID)
+
+	driver := folder.NewDriver(folder.GetAllFolders())
+
+	res, err := driver.GetAllChildFolders(orgID, "stunning-horridus")
+
+	if err != nil {
+		panic(err)
+	}
+
+	folder.PrettyPrint(res)
+
+	/*
 	orgID := uuid.FromStringOrNil(folder.DefaultOrgID)
 
 	res := folder.GetAllFolders()
@@ -19,4 +32,5 @@ func main() {
 	folder.PrettyPrint(res)
 	fmt.Printf("\n Folders for orgID: %s", orgID)
 	folder.PrettyPrint(orgFolder)
+	*/
 }

@@ -1,4 +1,4 @@
-module github.com/georgechieng-sc/interns-2022
+module sc-takehome
 
 go 1.23
 
