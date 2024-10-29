@@ -5,7 +5,6 @@ import (
 	"reflect"
 	"sc-takehome/folder"
 	"github.com/gofrs/uuid"
-	// "github.com/stretchr/testify/assert"
 )
 
 func Test_folder_GetFoldersByOrgID(t *testing.T) {
